@@ -2,11 +2,11 @@
 <nav
   class="fixed flex justify-between py-1 md:py-2 w-full lg:px-48 md:px-12 px-4 transition duration-500 ease-in content-center z-10 items-center"
   [ngClass]="{
-    'bg-medium  transition duration-700 ease-in py-0': isScrolled
+    'bg-white shadow  transition duration-700 ease-in py-0': isScrolled
   }"
 >
   <div class="">
-    <img src="assets/logo/logo.png" alt="Logo" class="w-12 md:w-16 md:h-16" />
+    <img src="assets/logo/logo.png" alt="Logo" class="w-20 md:w-20 md:h-20" />
   </div>
   <ul class="font-montserrat items-center hidden md:flex text-black gap-x-5">
     <li class="">
@@ -26,8 +26,8 @@
     <button class="mr-6">Login</button>
     <button class="py-2 px-4 text-white bg-black rounded-3xl">Signup</button>
   </div> -->
-  <div id="showMenu" class="md:hidden text-black w-5">
-    <img src=" assets/icons/heroicons/bars-3.svg" alt="Menu icon" />
+  <div id="showMenu" class="md:hidden text-black w-10">
+      <svg-icon src="assets/icons/heroicons/bars-3.svg" ></svg-icon>
   </div>
 </nav>
 
