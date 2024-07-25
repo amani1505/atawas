@@ -1,0 +1,29 @@
+<section class="section hero has-bg-image" aria-label="home"
+         style="background-image: url('assets/images/hero-bg.png')">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="h1 hero-title animate-typing overflow-hidden whitespace-nowrap">WELCOME TO ATAWAS!</h1>
+            <p class="hero-text">
+                Welcome to the Association of Tanzanian Water Suppliers (ATAWAS), where our commitment is dedicated to
+                advancing water and sanitation in Tanzania.
+            </p>
+            <div class="btn-wrapper">
+                <!-- Buttons here (if needed) -->
+            </div>
+        </div>
+        <div class="hero-slider" #sliderContainer>
+            <div class="slider-inner">
+                <ul class="slider-container">
+                    <li *ngFor="let slide of slides" class="slider-item">
+                        <figure class="img-holder" style="--width: 575; --height: 550;">
+                            <img [src]="slide.imageUrl" width="575" height="550" alt="" class="img-cover">
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+            <!-- Navigation buttons -->
+            <button class="slider-btn prev" aria-label="slide to previous"><svg-icon src="assets/icons/tableicons/chevron-left.svg" ></svg-icon></button>
+            <button class="slider-btn next" aria-label="slide to next"><svg-icon src="assets/icons/tableicons/chevron-right.svg" ></svg-icon></button>
+        </div>
+    </div>
+</section>

@@ -3,7 +3,8 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { HttpClientModule } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes),importProvidersFrom(AngularSvgIconModule.forRoot())]
+  providers: [provideRouter(routes),importProvidersFrom(AngularSvgIconModule.forRoot(),HttpClientModule)]
 };

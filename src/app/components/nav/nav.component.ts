@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [CommonModule,AngularSvgIconModule],
+  imports: [CommonModule,AngularSvgIconModule,RouterModule],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss'
 })

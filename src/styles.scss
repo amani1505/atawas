@@ -428,7 +428,7 @@
   .hero-text {
     font-size: var(--fs-5);
     color: var(--independence);
-    margin-block: 24px 36px;
+    margin-block: 24px 0;
   }
   
   .btn-wrapper {
@@ -490,7 +490,7 @@
     background-color: var(--white_a70);
     color: var(--charcoal);
     font-size: 2rem;
-    padding: 12px;
+    padding: 0px;
     border-radius: var(--radius-circle);
     transition: var(--transition-1);
   }

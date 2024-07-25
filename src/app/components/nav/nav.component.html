@@ -10,18 +10,17 @@
   </div>
   <ul class="font-montserrat items-center hidden md:flex text-black gap-x-5">
     <li class="">
-      <a class="growing-underline cursor-pointer hover:text-primary"> Home </a>
+      <a class="growing-underline cursor-pointer hover:text-primary"  routerLink="/" routerLinkActive="route-active" [routerLinkActiveOptions]="{ exact: true }"> Home </a>
     </li>
-    <li class="growing-underline cursor-pointer hover:text-primary">
+    <li class="growing-underline cursor-pointer hover:text-primary" routerLink="/services" routerLinkActive="route-active" [routerLinkActiveOptions]="{ exact: true }">
       <a>Service</a>
     </li>
     <li class="growing-underline cursor-pointer hover:text-primary">
       <a>Role</a>
     </li>
-    <li class="growing-underline cursor-pointer hover:text-primary">
+    <li class="growing-underline cursor-pointer hover:text-primary" routerLink="/contact" routerLinkActive="route-active" [routerLinkActiveOptions]="{ exact: true }">
       <a>Contact us</a>
     </li>
-   
   </ul>
   <!-- <div class="font-montserrat hidden md:block">
     <button class="mr-6">Login</button>
@@ -55,94 +54,4 @@
   </ul>
 </div>
 
-<section class="section hero has-bg-image" aria-label="home"
-                style="background-image: url( 'assets/images/hero-bg.png')">
-                <div class="hero-container">
-                    <div class="hero-content">
-                        <h1 class="h1 hero-title  animate-typing overflow-hidden whitespace-nowrap ">WELCOME TO
-                            ATAWAS! </h1>
-                        <p class="hero-text">
-                            Welcome to the Association of Tanzanian Water Suppliers (ATAWAS), where our commitment is
-                            dedicated to
-                            advancing water and sanitation in Tanzania.
-                        </p>
-                        <div class="btn-wrapper">
-                            <!-- {{-- <a href="#" class="btn btn-primary">Explore Now</a> --}}
-                            {{-- 
-                            <a href="#" class="btn btn-primary">Contact Us</a> --}} -->
 
-                        </div>
-                    </div>
-                    <div class="hero-slider" data-slider>
-                        <div class="slider-inner">
-                            <ul class="slider-container" data-slider-container>
-                                <li class="slider-item">
-                                    <figure class="img-holder" style="--width: 575; --height: 550;">
-                                        <img src="assets/images/hero-slide-1.jpg" width="575" height="550"
-                                            alt="" class="img-cover">
-                                    </figure>
-                                </li>
-                                <li class="slider-item">
-                                    <div class="hero-card">
-                                        <figure class="img-holder" style="--width: 575; --height: 550;">
-                                            <img src="assets/images/hero-slide-2.jpg" width="575"
-                                                height="550" alt="hero banner" class="img-cover">
-                                        </figure>
-                                        <!-- {{-- <button class="play-btn" aria-label="play adex intro">
-                                            <ion-icon name="play" aria-hidden="true"></ion-icon>
-                                        </button> --}} -->
-                                    </div>
-                                </li>
-                                <li class="slider-item">
-                                    <figure class="img-holder" style="--width: 575; --height: 550;">
-                                        <img src="assets/images/hero-slide-3.jpg" width="575"
-                                            height="550" alt="" class="img-cover">
-                                    </figure>
-                                </li>
-                                <li class="slider-item">
-                                    <figure class="img-holder" style="--width: 575; --height: 550;">
-                                        <img src="assets/images/hero-slide-4.jpg" width="575"
-                                            height="550" alt="" class="img-cover">
-                                    </figure>
-                                </li>
-                                <li class="slider-item">
-                                    <figure class="img-holder" style="--width: 575; --height: 550;">
-                                        <img src="assets/images/hero-slide-5.jpg" width="575"
-                                            height="550" alt="" class="img-cover">
-                                    </figure>
-                                </li>
-                                <li class="slider-item">
-                                    <figure class="img-holder" style="--width: 575; --height: 550;">
-                                        <img src="assets/images/hero-slide-6.jpg" width="575"
-                                            height="550" alt="" class="img-cover">
-                                    </figure>
-                                </li>
-                                <li class="slider-item">
-                                    <figure class="img-holder" style="--width: 575; --height: 550;">
-                                        <img src="assets/images/hero-slide-7.jpg" width="575"
-                                            height="550" alt="" class="img-cover">
-                                    </figure>
-                                </li>
-                                <li class="slider-item">
-                                    <figure class="img-holder" style="--width: 575; --height: 550;">
-                                        <img src="assets/images/hero-slide-8.jpg" width="575"
-                                            height="550" alt="" class="img-cover">
-                                    </figure>
-                                </li>
-                                <li class="slider-item">
-                                    <figure class="img-holder" style="--width: 575; --height: 550;">
-                                        <img src="assets/images/hero-slide-9.jpg" width="575"
-                                            height="550" alt="" class="img-cover">
-                                    </figure>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- <button class="slider-btn prev" aria-label="slide to previous" data-slider-prev>
-                            <ion-icon name="arrow-back"></ion-icon>
-                        </button> -->
-                        <!-- <button class="slider-btn next" aria-label="slide to next" data-slider-next>
-                            <ion-icon name="arrow-forward"></ion-icon>
-                        </button> -->
-                    </div>
-                </div>
-            </section>
