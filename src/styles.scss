@@ -1230,15 +1230,24 @@
 
 
 /* LOADING WITH ANIMATION */
+// .lazy-load {
+//   opacity: 0;
+//   transform: translateY(20px);
+//   transition: opacity 1s ease-out, transform 1s ease-out;
+// }
+
+// .lazy-load .loaded {
+//   opacity: 1;
+//   transform: translateY(0);
+// }
+
 .lazy-load {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition: opacity 1s ease-in-out;
 }
 
-.loaded {
+.lazy-load.loaded {
   opacity: 1;
-  transform: translateY(0);
 }
 
 .animate-item {

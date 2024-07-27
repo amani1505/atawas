@@ -1,13 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { LazyloadDirective } from '../../directives/lazyload.directive';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule,AngularSvgIconModule],
+  imports: [CommonModule, AngularSvgIconModule,LazyloadDirective],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss'
+  styleUrl: './hero.component.scss',
 })
 export class HeroComponent implements OnInit {
   @ViewChildren('sliderContainer') sliderContainers!: QueryList<ElementRef>;
@@ -36,10 +43,13 @@ export class HeroComponent implements OnInit {
   }
 
   initSlider() {
-    this.sliderContainers.forEach(sliderContainer => {
-      const sldierContainer = sliderContainer.nativeElement.querySelector('.slider-container');
-      const sliderPrevBtn = sliderContainer.nativeElement.querySelector('.slider-btn.prev');
-      const sliderNextBtn = sliderContainer.nativeElement.querySelector('.slider-btn.next');
+    this.sliderContainers.forEach((sliderContainer) => {
+      const sldierContainer =
+        sliderContainer.nativeElement.querySelector('.slider-container');
+      const sliderPrevBtn =
+        sliderContainer.nativeElement.querySelector('.slider-btn.prev');
+      const sliderNextBtn =
+        sliderContainer.nativeElement.querySelector('.slider-btn.next');
 
       sliderNextBtn.addEventListener('click', () => this.slideNext());
       sliderPrevBtn.addEventListener('click', () => this.slidePrev());
@@ -52,16 +62,18 @@ export class HeroComponent implements OnInit {
   }
 
   slidePrev() {
-    this.currentSlidePos = (this.currentSlidePos - 1 + this.slides.length) % this.slides.length;
+    this.currentSlidePos =
+      (this.currentSlidePos - 1 + this.slides.length) % this.slides.length;
     this.moveSliderItem();
   }
 
   moveSliderItem() {
-    this.sliderContainers.forEach(sliderContainer => {
-      const sldierContainer = sliderContainer.nativeElement.querySelector('.slider-container');
-      sldierContainer.style.transform = `translateX(-${sldierContainer.children[this.currentSlidePos].offsetLeft}px)`;
+    this.sliderContainers.forEach((sliderContainer) => {
+      const sldierContainer =
+        sliderContainer.nativeElement.querySelector('.slider-container');
+      sldierContainer.style.transform = `translateX(-${
+        sldierContainer.children[this.currentSlidePos].offsetLeft
+      }px)`;
     });
   }
-
-
 }
