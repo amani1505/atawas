@@ -1,0 +1,25 @@
+<div class="container">
+    <figure class="about-banner">
+      <img src="assets/images/about-banner.png" width="800" height="580" loading="lazy" alt="about banner" class="w-100">
+    </figure>
+    <div class="about-content">
+      <p class="section-subtitle" id="about-label">Why you should join Atawas?</p>
+      <h2 class="h2 section-title">
+        We bring solutions to make life easier for our clients.
+      </h2>
+      <ul>
+        <li class="about-item" *ngFor="let item of aboutItems; let i = index">
+          <div class="accordion-card" [class.expanded]="i === activeAccordion" (click)="toggleAccordion(i)">
+            <h3 class="card-title">
+              <button class="accordion-btn">
+                <svg-icon src="assets/icons/heroicons/chevron-down.svg" class="text-[var(--sky-blue)]" [svgStyle]="{ 'width.px': 20 }"></svg-icon>
+                <span class="span h5 text-left">{{item.title}}</span>
+              </button>
+            </h3>
+            <p class="accordion-content">{{item.content}}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
