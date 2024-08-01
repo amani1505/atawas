@@ -1,5 +1,15 @@
-<app-nav></app-nav>
+<app-nav [isScrolled] ="isScrolled"></app-nav>
 
 <router-outlet></router-outlet>
-
+    <div
+    *ngIf="isScrolled"
+    class="fixed bottom-5 right-5 z-50 bg-sky-500 text-white p-3 rounded shadow-2xl animate-bounce"
+    (click)="backToTheTop()"
+  >
+  <svg-icon
+  src="assets/icons/heroicons/arrow-up.svg"
+    class="text-[var(--sky-blue)]"
+    [svgStyle]="{ 'width.px': 20 }"
+  ></svg-icon>
+  </div>
 <app-footer></app-footer>
