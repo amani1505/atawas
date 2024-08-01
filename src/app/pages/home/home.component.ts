@@ -5,6 +5,7 @@ import { LazyloadDirective } from '../../directives/lazyload.directive';
 import { MissionComponent } from '../../components/mission/mission.component';
 import { ValueComponent } from '../../components/value/value.component';
 import { ReasonComponent } from '../../components/reason/reason.component';
+import { StakeholderComponent } from '../../components/stakeholder/stakeholder.component';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ import { ReasonComponent } from '../../components/reason/reason.component';
     LazyloadDirective,
     MissionComponent,
     ValueComponent,
-    ReasonComponent
+    ReasonComponent,
+    StakeholderComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

@@ -1,0 +1,14 @@
+<section class="lg:px-48 md:px-12 px-4 pt-0 pb-5">
+  <div class="mt-5 mb-12">
+    <h2 class="secondaryTitle text-center  pt-5 h2">Stake Holders</h2>
+  </div>
+  <owl-carousel-o [options]="stakeholderOptions">
+    <ng-container *ngFor="let item of stakeHolders">
+      <ng-template carouselSlide [id]="item.id">
+        <div class="w-48 h-48">
+          <img class="w-10 h-auto" [src]="item.url" alt="" />
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</section>
